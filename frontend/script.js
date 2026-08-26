@@ -1,6 +1,6 @@
 // For local development.
 // For deployment, change this to your deployed FastAPI URL.
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = window.__API_URL__ || "http://127.0.0.1:8000";
 
 const form = document.getElementById("predictionForm");
 const predictBtn = document.getElementById("predictBtn");

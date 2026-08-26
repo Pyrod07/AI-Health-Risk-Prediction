@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI-powered cardiovascular health risk assessment dashboard">
+
+    <meta
+        name="description"
+        content="AI-powered cardiovascular health risk assessment dashboard"
+    >
+
     <title>CardioAI | Health Risk Assessment</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <div class="bg-orb orb-one"></div>
     <div class="bg-orb orb-two"></div>
 
     <header class="topbar">
+
         <a class="brand" href="#">
             <span class="brand-mark">✚</span>
             <span>Cardio<span>AI</span></span>
@@ -25,200 +44,617 @@
             <span class="status-dot"></span>
             <span>AI Engine Online</span>
         </div>
+
     </header>
 
+
     <main class="page">
+
+        <!-- HERO -->
+
         <section class="hero">
+
             <div>
-                <span class="eyebrow">MACHINE LEARNING HEALTH ANALYTICS</span>
-                <h1>Understand your cardiovascular<br><span>risk in seconds.</span></h1>
+
+                <span class="eyebrow">
+                    MACHINE LEARNING HEALTH ANALYTICS
+                </span>
+
+                <h1>
+                    Understand your cardiovascular
+                    <br>
+                    <span>risk in seconds.</span>
+                </h1>
+
                 <p>
-                    Enter clinical indicators and let our Random Forest model
-                    estimate cardiovascular disease risk. This tool is for
-                    educational and demonstration purposes only.
+                    Enter clinical indicators and let our Random Forest
+                    model estimate cardiovascular disease risk.
+                    This tool is for educational and demonstration purposes only.
                 </p>
+
             </div>
 
+
             <div class="hero-badge">
-                <div class="hero-icon">AI</div>
+
+                <div class="hero-icon">
+                    AI
+                </div>
+
                 <div>
                     <strong>Random Forest</strong>
                     <small>ML prediction model</small>
                 </div>
+
             </div>
+
         </section>
+
+
+        <!-- MAIN DASHBOARD -->
 
         <section class="dashboard-grid">
+
+
+            <!-- INPUT FORM -->
+
             <div class="panel form-panel">
+
                 <div class="panel-heading">
+
                     <div>
-                        <span class="section-kicker">ASSESSMENT</span>
-                        <h2>Patient parameters</h2>
+                        <span class="section-kicker">
+                            ASSESSMENT
+                        </span>
+
+                        <h2>
+                            Patient parameters
+                        </h2>
                     </div>
-                    <span class="step-pill">13 inputs</span>
+
+                    <span class="step-pill">
+                        13 inputs
+                    </span>
+
                 </div>
+
 
                 <form id="predictionForm">
+
                     <div class="form-grid">
-                        <label class="field">
-                            <span>Age <em>years</em></span>
-                            <input type="number" id="age" min="1" max="120" placeholder="e.g. 55" required>
-                        </label>
+
 
                         <label class="field">
-                            <span>Sex</span>
+
+                            <span>
+                                Age
+                                <em>years</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="age"
+                                min="1"
+                                max="120"
+                                placeholder="e.g. 55"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>
+                                Sex
+                            </span>
+
                             <select id="sex" required>
-                                <option value="" selected disabled>Select</option>
-                                <option value="1">Male</option>
-                                <option value="0">Female</option>
+
+                                <option
+                                    value=""
+                                    selected
+                                    disabled
+                                >
+                                    Select
+                                </option>
+
+                                <option value="1">
+                                    Male
+                                </option>
+
+                                <option value="0">
+                                    Female
+                                </option>
+
                             </select>
+
                         </label>
 
-                        <label class="field">
-                            <span>Chest pain type <em>0–3</em></span>
-                            <input type="number" id="cp" min="0" max="3" placeholder="e.g. 1" required>
-                        </label>
 
                         <label class="field">
-                            <span>Resting BP <em>mmHg</em></span>
-                            <input type="number" id="trestbps" min="50" max="250" placeholder="e.g. 140" required>
+
+                            <span>
+                                Chest pain type
+                                <em>0–3</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="cp"
+                                min="0"
+                                max="3"
+                                placeholder="e.g. 1"
+                                required
+                            >
+
                         </label>
 
-                        <label class="field">
-                            <span>Cholesterol <em>mg/dL</em></span>
-                            <input type="number" id="chol" min="50" max="700" placeholder="e.g. 240" required>
-                        </label>
 
                         <label class="field">
-                            <span>Fasting blood sugar</span>
+
+                            <span>
+                                Resting BP
+                                <em>mmHg</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="trestbps"
+                                min="50"
+                                max="250"
+                                placeholder="e.g. 140"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>
+                                Cholesterol
+                                <em>mg/dL</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="chol"
+                                min="50"
+                                max="700"
+                                placeholder="e.g. 240"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>
+                                Fasting blood sugar
+                            </span>
+
                             <select id="fbs" required>
-                                <option value="" selected disabled>Select</option>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
+
+                                <option
+                                    value=""
+                                    selected
+                                    disabled
+                                >
+                                    Select
+                                </option>
+
+                                <option value="1">
+                                    Yes
+                                </option>
+
+                                <option value="0">
+                                    No
+                                </option>
+
                             </select>
+
                         </label>
 
-                        <label class="field">
-                            <span>Resting ECG <em>0–2</em></span>
-                            <input type="number" id="restecg" min="0" max="2" placeholder="e.g. 1" required>
-                        </label>
 
                         <label class="field">
-                            <span>Max heart rate <em>bpm</em></span>
-                            <input type="number" id="thalach" min="50" max="250" placeholder="e.g. 150" required>
+
+                            <span>
+                                Resting ECG
+                                <em>0–2</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="restecg"
+                                min="0"
+                                max="2"
+                                placeholder="e.g. 1"
+                                required
+                            >
+
                         </label>
 
+
                         <label class="field">
-                            <span>Exercise angina</span>
+
+                            <span>
+                                Max heart rate
+                                <em>bpm</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="thalach"
+                                min="50"
+                                max="250"
+                                placeholder="e.g. 150"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>
+                                Exercise angina
+                            </span>
+
                             <select id="exang" required>
-                                <option value="" selected disabled>Select</option>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
+
+                                <option
+                                    value=""
+                                    selected
+                                    disabled
+                                >
+                                    Select
+                                </option>
+
+                                <option value="1">
+                                    Yes
+                                </option>
+
+                                <option value="0">
+                                    No
+                                </option>
+
                             </select>
+
                         </label>
 
-                        <label class="field">
-                            <span>ST depression <em>oldpeak</em></span>
-                            <input type="number" id="oldpeak" min="0" max="10" step="0.1" placeholder="e.g. 1.0" required>
-                        </label>
 
                         <label class="field">
-                            <span>Slope <em>0–2</em></span>
-                            <input type="number" id="slope" min="0" max="2" placeholder="e.g. 1" required>
+
+                            <span>
+                                ST depression
+                                <em>oldpeak</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="oldpeak"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                placeholder="e.g. 1.0"
+                                required
+                            >
+
                         </label>
 
-                        <label class="field">
-                            <span>Major vessels <em>0–4</em></span>
-                            <input type="number" id="ca" min="0" max="4" placeholder="e.g. 0" required>
-                        </label>
 
                         <label class="field">
-                            <span>Thalassemia <em>dataset code</em></span>
-                            <input type="number" id="thal" min="0" max="3" placeholder="e.g. 2" required>
+
+                            <span>
+                                Slope
+                                <em>0–2</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="slope"
+                                min="0"
+                                max="2"
+                                placeholder="e.g. 1"
+                                required
+                            >
+
                         </label>
+
+
+                        <label class="field">
+
+                            <span>
+                                Major vessels
+                                <em>0–4</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="ca"
+                                min="0"
+                                max="4"
+                                placeholder="e.g. 0"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label class="field">
+
+                            <span>
+                                Thalassemia
+                                <em>dataset code</em>
+                            </span>
+
+                            <input
+                                type="number"
+                                id="thal"
+                                min="0"
+                                max="3"
+                                placeholder="e.g. 2"
+                                required
+                            >
+
+                        </label>
+
                     </div>
 
-                    <button class="primary-btn" id="predictBtn" type="submit">
-                        <span class="btn-label">Analyze health risk</span>
-                        <span class="btn-arrow">→</span>
+
+                    <button
+                        class="primary-btn"
+                        id="predictBtn"
+                        type="submit"
+                    >
+
+                        <span class="btn-label">
+                            Analyze health risk
+                        </span>
+
+                        <span class="btn-arrow">
+                            →
+                        </span>
+
                     </button>
 
-                    <p class="form-note">Your data is processed by the local API and stored in the project database for prediction history.</p>
+
+                    <p class="form-note">
+                        Your data is processed by the local API and stored
+                        in the project database for prediction history.
+                    </p>
+
                 </form>
+
             </div>
+
+
+            <!-- RESULT COLUMN -->
 
             <aside class="side-column">
-                <div class="panel result-panel" id="resultCard">
+
+
+                <div
+                    class="panel result-panel"
+                    id="resultCard"
+                >
+
                     <div class="panel-heading compact">
+
                         <div>
-                            <span class="section-kicker">AI RESULT</span>
-                            <h2>Risk assessment</h2>
+
+                            <span class="section-kicker">
+                                AI RESULT
+                            </span>
+
+                            <h2>
+                                Risk assessment
+                            </h2>
+
                         </div>
-                        <span class="live-pill">LIVE</span>
+
+                        <span class="live-pill">
+                            LIVE
+                        </span>
+
                     </div>
 
-                    <div class="empty-result" id="emptyResult">
-                        <div class="empty-icon">◎</div>
-                        <h3>Waiting for assessment</h3>
-                        <p>Complete the patient parameters and run the AI model.</p>
+
+                    <!-- EMPTY STATE -->
+
+                    <div
+                        class="empty-result"
+                        id="emptyResult"
+                    >
+
+                        <div class="empty-icon">
+                            ◎
+                        </div>
+
+                        <h3>
+                            Waiting for assessment
+                        </h3>
+
+                        <p>
+                            Complete the patient parameters and run
+                            the AI model.
+                        </p>
+
                     </div>
 
-                    <div class="result-content hidden" id="resultContent">
-                        <div class="gauge" id="gauge">
+
+                    <!-- RESULT -->
+
+                    <div
+                        class="result-content hidden"
+                        id="resultContent"
+                    >
+
+                        <div
+                            class="gauge"
+                            id="gauge"
+                        >
+
                             <div class="gauge-inner">
-                                <strong id="riskPercentage">0%</strong>
-                                <span>estimated risk</span>
+
+                                <strong id="riskPercentage">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    estimated risk
+                                </span>
+
                             </div>
+
                         </div>
 
-                        <div class="risk-chip" id="riskChip">Risk</div>
-                        <h3 id="riskLevel">Risk Level</h3>
-                        <p id="predictionText" class="prediction-text"></p>
+
+                        <div
+                            class="risk-chip"
+                            id="riskChip"
+                        >
+                            Risk
+                        </div>
+
+
+                        <h3 id="riskLevel">
+                            Risk Level
+                        </h3>
+
+
+                        <p
+                            id="predictionText"
+                            class="prediction-text"
+                        ></p>
+
 
                         <div class="result-meta">
+
                             <div>
-                                <span>Model</span>
-                                <strong>Random Forest</strong>
+
+                                <span>
+                                    Model
+                                </span>
+
+                                <strong>
+                                    Random Forest
+                                </strong>
+
                             </div>
+
+
                             <div>
-                                <span>Output</span>
-                                <strong id="predictionClass">—</strong>
+
+                                <span>
+                                    Output
+                                </span>
+
+                                <strong id="predictionClass">
+                                    —
+                                </strong>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
+                <!-- DISCLAIMER -->
 
                 <div class="info-card">
-                    <div class="info-icon">ⓘ</div>
-                    <div>
-                        <strong>For demonstration only</strong>
-                        <p>This application is a software/ML project and is not a medical diagnosis.</p>
+
+                    <div class="info-icon">
+                        ⓘ
                     </div>
+
+                    <div>
+
+                        <strong>
+                            For demonstration only
+                        </strong>
+
+                        <p>
+                            This application is a software/ML project
+                            and is not a medical diagnosis.
+                        </p>
+
+                    </div>
+
                 </div>
+
             </aside>
+
         </section>
+
+
+        <!-- HISTORY -->
 
         <section class="panel history-panel">
+
             <div class="panel-heading">
+
                 <div>
-                    <span class="section-kicker">DATABASE</span>
-                    <h2>Prediction history</h2>
+
+                    <span class="section-kicker">
+                        DATABASE
+                    </span>
+
+                    <h2>
+                        Prediction history
+                    </h2>
+
                 </div>
-                <button class="secondary-btn" id="refreshBtn" type="button">↻ Refresh</button>
+
+
+                <button
+                    class="secondary-btn"
+                    id="refreshBtn"
+                    type="button"
+                >
+                    ↻ Refresh
+                </button>
+
             </div>
+
 
             <div id="historyContainer">
-                <div class="loading-state">Loading prediction history...</div>
+
+                <div class="loading-state">
+                    Loading prediction history...
+                </div>
+
             </div>
+
         </section>
+
     </main>
 
+
     <footer>
-        <span>CardioAI</span>
-        <span>•</span>
-        <span>FastAPI · Random Forest · SQLAlchemy · SQLite</span>
+
+        <span>
+            CardioAI
+        </span>
+
+        <span>
+            •
+        </span>
+
+        <span>
+            FastAPI · Random Forest · SQLAlchemy · SQLite
+        </span>
+
     </footer>
 
+
+    <script src="config.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
