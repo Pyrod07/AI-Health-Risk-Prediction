@@ -1,1 +1,1 @@
-window.__API_URL__ = "http://127.0.0.1:8000";
+window.__API_URL__ = "https://ai-health-risk-prediction.onrender.com";
