@@ -1,100 +1,60 @@
-\# 🫀 AI Health Risk Prediction System
+# ❤️ AI Health Risk Prediction
 
+An AI-powered web application that predicts cardiovascular disease risk based on patient health parameters using machine learning.
 
+The project combines a **Random Forest machine learning model**, **FastAPI backend**, **SQLite database**, and a **responsive HTML/CSS/JavaScript frontend**.
 
-An end-to-end \*\*AI-powered cardiovascular health risk prediction system\*\* that uses machine learning to estimate heart disease risk from 13 clinical parameters.
+---
 
+## 🚀 Features
 
+- ❤️ Cardiovascular disease risk prediction
+- 🤖 Machine learning based prediction
+- 📊 Risk probability percentage
+- 🟢 Low / 🟡 Moderate / 🔴 High risk classification
+- 🧠 Random Forest classification model
+- ⚡ FastAPI REST API
+- 💾 SQLite prediction history
+- 🌐 Interactive web interface
+- 📈 Model evaluation using:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1 Score
+  - ROC-AUC
+- 📊 Feature importance analysis
+- 🔄 Prediction history
 
-The project combines a \*\*Random Forest machine learning model\*\*, \*\*FastAPI backend\*\*, \*\*SQLite database\*\*, and a responsive \*\*HTML/CSS/JavaScript frontend\*\*.
+---
 
-
-
-> ⚠️ \*\*Disclaimer:\*\* This project is intended for educational and demonstration purposes only. It is not a medical diagnostic system and should not be used to make clinical decisions.
-
-
-
-\---
-
-
-
-\## 🚀 Features
-
-
-
-\- 🧠 Machine learning-based cardiovascular risk prediction
-
-\- 🌲 Random Forest classification model
-
-\- 📊 Risk probability and risk-level estimation
-
-\- 🔬 13 clinical input parameters
-
-\- ⚡ FastAPI REST API
-
-\- 🗄️ SQLite database for prediction history
-
-\- 📜 Prediction history tracking
-
-\- 🌐 Responsive web frontend
-
-\- 🔐 CORS-enabled frontend/backend communication
-
-\- 📈 Model evaluation using multiple ML metrics
-
-\- 🔄 Train and replace the ML model using the included training script
-
-\- 📖 Interactive FastAPI Swagger documentation
-
-
-
-\---
-
-
-
-\## 🏗️ System Architecture
-
-
+## 🏗️ Project Architecture
 
 ```text
-
-&#x20;                   ┌──────────────────────┐
-
-&#x20;                   │      Frontend        │
-
-&#x20;                   │ HTML / CSS / JS      │
-
-&#x20;                   └──────────┬───────────┘
-
-&#x20;                              │
-
-&#x20;                              │ HTTP / REST
-
-&#x20;                              ▼
-
-&#x20;                   ┌──────────────────────┐
-
-&#x20;                   │      FastAPI         │
-
-&#x20;                   │      Backend         │
-
-&#x20;                   └──────────┬───────────┘
-
-&#x20;                              │
-
-&#x20;                   ┌──────────┴───────────┐
-
-&#x20;                   │                      │
-
-&#x20;                   ▼                      ▼
-
-&#x20;         ┌──────────────────┐   ┌──────────────────┐
-
-&#x20;         │ Random Forest ML │   │ SQLite Database  │
-
-&#x20;         │      Model       │   │ Prediction       │
-
-&#x20;         └──────────────────┘   │ History          │
-
-&#x20;                                └──────────────────┘
-
+AI-Health-Risk-Prediction/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── database.py
+│   │   ├── models.py
+│   │   ├── schemas.py
+│   │   └── ml/
+│   │       └── predictor.py
+│   │
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── index.html
+│   ├── script.js
+│   ├── style.css
+│   └── config.js
+│
+├── ml/
+│   ├── dataset/
+│   │   └── heart.csv
+│   ├── model/
+│   │   └── heart_disease_model.pkl
+│   └── train.py
+│
+├── .gitignore
+└── README.md
