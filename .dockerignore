@@ -1,0 +1,13 @@
+.git
+.gitignore
+.vscode
+__pycache__
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+venv
+.venv
+frontend
+ml/dataset
+ml/results
