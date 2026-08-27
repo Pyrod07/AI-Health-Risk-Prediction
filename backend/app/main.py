@@ -22,7 +22,7 @@ allowed_origins = [
     origin.strip()
     for origin in os.getenv(
         "CORS_ORIGINS",
-        "http://127.0.0.1:5500,http://localhost:5500",
+        "https://ai-health-risk-prediction.vercel.app,http://127.0.0.1:5500,http://localhost:5500",
     ).split(",")
     if origin.strip()
 ]
