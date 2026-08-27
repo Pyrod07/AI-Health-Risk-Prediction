@@ -1,1 +1,1 @@
-window.__API_URL__ = "https://ai-health-risk-prediction.onrender.com";
+window.__API_URL__ = "https://ai-health-risk-api-mridul.onrender.com";
